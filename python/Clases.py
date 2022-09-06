@@ -1,14 +1,18 @@
+class Vehiculo():
+    def __init__(self,color,ruedas,puertas):
+        self.color = color
+        self.ruedas = ruedas
+        self.puertas = puertas
 
-class vehiculo:
-    Color = "Negro"
-    Ruedas = 4
-    Puertas = 4
+class Coche(Vehiculo):
+    def __init__(self,color,ruedas,puertas,cilindrada,velocidad):
+        self.color = color
+        self.ruedas = ruedas 
+        self.puertas = puertas
+        self.cilindrada = cilindrada
+        self.velocidad = velocidad 
+    def __str__(self):
+        return "color {}, {} km/h, {} ruedas, {} puertas, {} cilindrada".format( self.color, self.velocidad, self.ruedas, self.puertas, self.cilindrada )
 
-class coche(vehiculo):
-    velocidad = 120
-    cilindrada = 500
-
-Toyota_Corolla = coche()
-
-print(Toyota_Corolla.cilindrada)
-print(Toyota_Corolla.Ruedas)
+Toyota= Coche("Rojo",4,4,300,120)
+print(Toyota)
